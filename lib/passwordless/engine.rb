@@ -3,7 +3,7 @@
 module Passwordless
   # Engine that runs the passwordless gem.
   class Engine < ::Rails::Engine
-    isolate_namespace Passwordless
+    # isolate_namespace Passwordless
 
     config.to_prepare do
       require 'passwordless/router_helpers'
