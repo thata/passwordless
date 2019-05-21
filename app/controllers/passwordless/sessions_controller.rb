@@ -51,7 +51,7 @@ module Passwordless
       sign_in session.authenticatable
 
       redirect_enabled = Passwordless.redirect_back_after_sign_in
-      destination = reset_passwordless_redirect_location!(User)
+      destination = params[:redirect_to] || reset_passwordless_redirect_location!(User)
 
       if redirect_enabled && destination
         redirect_to destination
